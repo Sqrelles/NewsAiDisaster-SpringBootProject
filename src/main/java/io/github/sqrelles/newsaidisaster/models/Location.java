@@ -1,2 +1,17 @@
-package io.github.sqrelles.newsaidisaster.models;public class location {
+package io.github.sqrelles.newsaidisaster.models;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+public class Location {
+    private String title;
+    @JsonProperty("cityName")
+    private String cityName;
+    @JsonProperty("longitude")
+    private double longitude;
+    @JsonProperty("latitude")
+    private double latitude;
 }

@@ -1,2 +1,16 @@
-package io.github.sqrelles.newsaidisaster.models;public class Disaster {
+package io.github.sqrelles.newsaidisaster.models;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Getter;
+import lombok.Setter;
+
+import java.util.List;
+
+@Getter
+@Setter
+public class Disaster {
+    @JsonProperty("disasterType")
+    private String disasterType;
+    @JsonProperty("locations")
+    private List<Location> disasterLocation;
 }
